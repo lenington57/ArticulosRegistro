@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.ArticuloIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
@@ -44,7 +45,17 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
+            this.ArticuloIdErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ExistErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CantCotErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantCotErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -184,6 +195,26 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
             // 
+            // ArticuloIdErrorProvider
+            // 
+            this.ArticuloIdErrorProvider.ContainerControl = this;
+            // 
+            // DescripcionErrorProvider
+            // 
+            this.DescripcionErrorProvider.ContainerControl = this;
+            // 
+            // PrecioErrorProvider
+            // 
+            this.PrecioErrorProvider.ContainerControl = this;
+            // 
+            // ExistErrorProvider
+            // 
+            this.ExistErrorProvider.ContainerControl = this;
+            // 
+            // CantCotErrorProvider
+            // 
+            this.CantCotErrorProvider.ContainerControl = this;
+            // 
             // ArticuloForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +240,11 @@
             this.Text = "ArticuloForm";
             this.Load += new System.EventHandler(this.ArticuloForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantCotErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +268,10 @@
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.ErrorProvider ArticuloIdErrorProvider;
+        private System.Windows.Forms.ErrorProvider DescripcionErrorProvider;
+        private System.Windows.Forms.ErrorProvider PrecioErrorProvider;
+        private System.Windows.Forms.ErrorProvider ExistErrorProvider;
+        private System.Windows.Forms.ErrorProvider CantCotErrorProvider;
     }
 }

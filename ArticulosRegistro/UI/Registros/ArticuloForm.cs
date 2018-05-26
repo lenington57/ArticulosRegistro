@@ -32,12 +32,18 @@ namespace ArticulosRegistro.UI.Registros
             articulo.Descripcion = DescripcionTextBox.Text;
             articulo.Precio = Convert.ToSingle(PrecioTextBox.Text);
             articulo.Existencia = Convert.ToSingle(ExistenciaTextBox.Text);
+            articulo.CantCotizada = Convert.ToSingle(CantCotizTextBox.Text);
 
             return articulo;
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            if (Error(2))//Indicando que llene cada campo que esté vacío.
+            {
+                MessageBox.Show("Llenar Campo");
+                return;
+            }
             Articulo articulo = LlenaClase();
             bool Paso = false;
 
@@ -63,7 +69,7 @@ namespace ArticulosRegistro.UI.Registros
             DescripcionTextBox.Clear();
             PrecioTextBox.Clear();
             ExistenciaTextBox.Clear();
-            CantCotizTextBox.Clear();
+            CantCotizTextBox.Clear();            
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -79,6 +85,39 @@ namespace ArticulosRegistro.UI.Registros
                 ExistenciaTextBox.Text = articulo.Existencia.ToString();
                 CantCotizTextBox.Text = articulo.CantCotizada.ToString();
             }
+        }
+
+        private bool Error(int error)
+        {
+            bool paso = false;
+            //Tiramos un error para cada campo que no este lleno
+            if (error == 1 && ArticuloIdNumericUpDown.Value == 0)
+            {
+                ArticuloIdErrorProvider.SetError(ArticuloIdNumericUpDown, "Ingrese un ID");//Tiramos un error si ArticuloIdNumericUpDown que no está lleno.
+                paso = true;
+            }
+            if (error == 2 && DescripcionTextBox.Text == string.Empty)
+            {
+                DescripcionErrorProvider.SetError(DescripcionTextBox, "Ingrese una Dirección");//Tiramos un error si DescripcionTextBox que no está lleno.
+                paso = true;
+            }
+            if (error == 2 && PrecioTextBox.Text == string.Empty)
+            {
+                PrecioErrorProvider.SetError(PrecioTextBox, "Ingrese una Precio"); //Tiramos un error si PrecioTextBox que no está lleno.
+                paso = true;
+            }
+            if (error == 2 && ExistenciaTextBox.Text == string.Empty)
+            {
+                ExistErrorProvider.SetError(ExistenciaTextBox, "Ingrese una Cuant@s hay en Existencia"); //Tiramos un error si ExistenciaTextBox que no está lleno.
+                paso = true;
+            }
+            if (error == 2 && CantCotizTextBox.Text == string.Empty)
+            {
+                CantCotErrorProvider.SetError(CantCotizTextBox, "Ingrese una Cantidad que desea comprar");//Tiramos un error si CantCotizTextBox que no está lleno.
+                paso = true;
+            }
+
+            return paso;
         }
     }
 }
