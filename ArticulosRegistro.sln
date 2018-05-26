@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticulosRegistro", "ArticulosRegistro\ArticulosRegistro.csproj", "{030BB454-9C7F-4AB5-8C2C-162EFF0F3E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticulosRegistroTests", "ArticulosRegistroTests\ArticulosRegistroTests.csproj", "{BBF8E68A-F790-44C9-B515-3B0BD400FF24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{030BB454-9C7F-4AB5-8C2C-162EFF0F3E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{030BB454-9C7F-4AB5-8C2C-162EFF0F3E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{030BB454-9C7F-4AB5-8C2C-162EFF0F3E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF8E68A-F790-44C9-B515-3B0BD400FF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF8E68A-F790-44C9-B515-3B0BD400FF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF8E68A-F790-44C9-B515-3B0BD400FF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF8E68A-F790-44C9-B515-3B0BD400FF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
