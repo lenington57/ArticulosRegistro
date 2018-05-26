@@ -15,5 +15,11 @@ namespace ArticulosRegistro
         {
             InitializeComponent();
         }
+
+        private void registroDeArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArticulosRegistro.UI.Registros.ArticuloForm articuloForm = new UI.Registros.ArticuloForm();
+            articuloForm.Visible = true;
+        }
     }
 }

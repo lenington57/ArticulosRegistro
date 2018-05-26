@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ArticulosRegistro.Entidades;
+using ArticulosRegistro.BLL;
+using System.Linq.Expressions;
 
 namespace ArticulosRegistro.UI.Consultas
 {
@@ -14,6 +17,25 @@ namespace ArticulosRegistro.UI.Consultas
         public ConsultarForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            //Inicializando el filtro en true
+           /* Expression<Func<Articulo, bool>> = a => true;
+
+            int id;
+            switch()*/
         }
     }
 }
