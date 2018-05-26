@@ -83,7 +83,7 @@
             // 
             // FechaVenciDateTimePicker
             // 
-            this.FechaVenciDateTimePicker.CustomFormat = "dd/mm/yy";
+            this.FechaVenciDateTimePicker.CustomFormat = "dd/MM/yy";
             this.FechaVenciDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaVenciDateTimePicker.Location = new System.Drawing.Point(169, 82);
             this.FechaVenciDateTimePicker.Name = "FechaVenciDateTimePicker";
