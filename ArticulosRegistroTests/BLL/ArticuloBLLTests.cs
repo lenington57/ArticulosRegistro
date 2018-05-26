@@ -32,7 +32,12 @@ namespace ArticulosRegistro.BLL.Tests
         {
             bool paso;
             Articulo articulo = new Articulo();
-            articulo.CantCotizada = 20f;
+            articulo.ArticuloId = 1;
+            articulo.FechaVencimiento = DateTime.Now;
+            articulo.Descripcion = "Arroz";
+            articulo.Precio = 100f;
+            articulo.Existencia = 20f;
+            articulo.CantCotizada = 10f;
             paso = ArticuloBLL.Modificar(articulo);
             Assert.AreEqual(paso, true);
         }
@@ -41,9 +46,6 @@ namespace ArticulosRegistro.BLL.Tests
         public void EliminarTest(int id)
         {
             bool paso;
-            Contexto contexto = new Contexto();
-            Articulo articulo = contexto.Articulo.Find(id);
-            contexto.Articulo.Remove(articulo);
             paso = ArticuloBLL.Eliminar(id);
             Assert.AreEqual(paso, true);
         }
