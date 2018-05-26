@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\ConsultarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultarForm.Designer.cs">
+      <DependentUpon>ConsultarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\ArticuloForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\ConsultarForm.resx">
+      <DependentUpon>ConsultarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\ArticuloForm.resx">
       <DependentUpon>ArticuloForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,7 +104,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Consultas\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>

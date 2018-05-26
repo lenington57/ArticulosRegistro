@@ -71,6 +71,7 @@
             this.BuscarButton.TabIndex = 2;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // label2
             // 
@@ -162,6 +163,7 @@
             this.NuevoButton.TabIndex = 13;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // GuardarButton
             // 
@@ -171,10 +173,11 @@
             this.GuardarButton.TabIndex = 14;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(215, 333);
+            this.EliminarButton.Location = new System.Drawing.Point(206, 334);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarButton.TabIndex = 15;
@@ -204,6 +207,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ArticuloForm";
             this.Text = "ArticuloForm";
+            this.Load += new System.EventHandler(this.ArticuloForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ArticuloIdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
